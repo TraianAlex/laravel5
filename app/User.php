@@ -73,12 +73,12 @@ class User extends Model implements AuthenticatableContract,
 
     public function friendsOfMine()
     {
-        return $this->belongsToMany('App\User', 'friends', 'user_id', 'friend_id');
+        return $this->belongsToMany('App\User', 'friends', 'user_id', 'friend_id')->withTimestamps();
     }
 
     public function friendOf()
     {
-        return $this->belongsToMany('App\User', 'friends', 'friend_id', 'user_id');
+        return $this->belongsToMany('App\User', 'friends', 'friend_id', 'user_id')->withTimestamps();
     }
 
     public function friends()

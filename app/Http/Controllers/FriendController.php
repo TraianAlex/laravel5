@@ -48,6 +48,7 @@ class FriendController extends Controller
     public function getAccept($username)
     {
         $user = User::where('username', $username)->first();
+
         if(!$user) return redirect('home')->with('info', 'That user could not be found');
         if(!auth()->user()->hasFriendRequestReceived($user)){
             return redirect()->route('home');
@@ -60,6 +61,7 @@ class FriendController extends Controller
     public function postDelete($username)
     {
         $user = User::where('username', $username)->first();
+        
         if(!auth()->user()->isFriendsWith($user)){
             return redirect()->back();
         }

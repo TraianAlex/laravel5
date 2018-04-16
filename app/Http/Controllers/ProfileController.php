@@ -20,6 +20,7 @@ class ProfileController extends Controller
     {
         $user = User::where('username', $username)->firstOrFail();//->first();
         if(!$user) abord(404);
+        
         $statuses = $user->statuses()->notReply()->orderBy('created_at', 'desc')->paginate(10);//get()
         return view('user.profile.index', compact('user', 'statuses'))
             ->with('authUserIsFriend', auth()->user()->isFriendsWith($user));

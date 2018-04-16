@@ -12,6 +12,13 @@
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
         <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63781170-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-63781170-2');
+        </script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -23,7 +30,7 @@
             @include('partials.alerts')
             @yield('content')
         </div>
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ asset('assets/js/vendor/jquery-1.11.2.min.js') }}"><\/script>')</script>
 
@@ -38,7 +45,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            ga('create','UA-63781170-2','auto');ga('send','pageview');
         </script>
     </body>
 </html>

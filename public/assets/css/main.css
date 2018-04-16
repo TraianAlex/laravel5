@@ -206,3 +206,15 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+/*********************************/
+
+.navbar-default{
+    background-color: blue;
+}
+.navbar-default .navbar-brand{
+    color: #f6eded;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #f6eded;
+}
